@@ -1,0 +1,96 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f7fafc;
+    color: #222;
+}
+header {
+    background: linear-gradient(120deg, #0f2027, #2c5364 90%);
+    color: #fff;
+    padding-bottom: 60px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #00e6d0;
+}
+.hero {
+    text-align: center;
+    margin-top: 60px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.cta {
+    background: #00e6d0;
+    color: #222;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.cta:hover {
+    background: #fff;
+    color: #00e6d0;
+}
+section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c5364;
+}
+section ul {
+    padding-left: 20px;
+}
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #222;
+    color: #fff;
+    margin-top: 60px;
+}
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 20px 5%;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    section {
+        margin: 40px 0;
+    }
+}
