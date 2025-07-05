@@ -1,13 +1,12 @@
 import random 
 import time 
+import random
 from datetime import datetime
 
 def typical_log_generator():
     """So this will generate fake ssh auth logs for testing"""
     users = ["root", "admin", "userX", "ubuntu", "fedora"]
-    actions = ["login", "logout", "failed_login"]
-    ip = f"192.168.1.{random.randint(1, 255)}"
-
+    ip = "192.168.1.100"
     log_entry = (
         f"{datetime.now().strftime('%b %d %H:%M:%S')}"
         f"sshd[{random.randint(1000, 9999)}]: "
@@ -18,7 +17,7 @@ def typical_log_generator():
 
 def main():
     # This will continuously generate logs and write them to a file
-    with open("../data/sample_auth.log","a") as f:
+    with open("../data/sample_auth.log", "a", encoding="utf-8") as f:
         while True:
             log_entry = typical_log_generator()
             f.write(log_entry + "\n")

@@ -9,9 +9,14 @@ Discord_webhook_url = "https://discord.com/api/webhooks/1384165307379224576/EX-W
 
 def main():
     rule_detection = RuleDetection()
+    max_iterations = 20  
 
-    while True:
+    for _ in range(max_iterations):
         log_entry = typical_log_generator()
+        print(log_entry)
+        # Write log to file
+        with open("../data/sample_auth.log", "a", encoding="utf-8") as f:
+            f.write(log_entry + "\n")
         parsed_log = parse_ssh_log(log_entry)
 
         if parsed_log and rule_detection.detect_brute_force(parsed_log):
